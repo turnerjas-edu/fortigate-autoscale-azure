@@ -294,7 +294,7 @@
             "zones": [
                 "1",
                 "2"
-            ]
+            ],
             "plan": {
                 "name": "[parameters('VmImageReferenceFgtBYOL').sku]",
                 "publisher": "[parameters('VmImageReferenceFgtBYOL').publisher]",
@@ -404,7 +404,7 @@
             "zones": [
                 "1",
                 "2"
-            ]
+            ],
             "plan": {
                 "name": "[parameters('VmImageReferenceFgtPAYG').sku]",
                 "publisher": "[parameters('VmImageReferenceFgtPAYG').publisher]",
