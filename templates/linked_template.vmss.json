@@ -57,12 +57,6 @@
         "LoadBalancerBackendIPPoolNameSubnet2": {
             "type": "String"
         },
-        "LoadBalancerBackendIPPoolNameSubnet3": {
-            "type": "String"
-        },
-        "LoadBalancerBackendIPPoolNameSubnet4": {
-            "type": "String"
-        },
         "MaxBYOLInstanceCount": {
             "type": "Int"
         },
@@ -95,12 +89,6 @@
             "type": "String"
         },
         "Subnet2Name": {
-            "type": "String"
-        },
-        "Subnet3Name": {
-            "type": "String"
-        },
-        "Subnet4Name": {
             "type": "String"
         },
         "UniqueResourceNamePrefix": {
@@ -394,50 +382,6 @@
                                     ]
                                 }
                             },
-                            {
-                                "name": "[concat(parameters('VmssNameBYOL'),'-nic-config', '-subnet', '3')]",
-                                "properties": {
-                                    "primary": false,
-                                    "enableIPForwarding": true,
-                                    "ipConfigurations": [
-                                        {
-                                            "name": "[concat(parameters('VmssNameBYOL'), '-ip-config','-subnet', '3')]",
-                                            "properties": {
-                                                "Subnet": {
-                                                    "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/virtualNetworks/subnets', parameters('VnetName'), parameters('Subnet3Name'))]"
-                                                },
-                                                "loadBalancerBackendAddressPools": [
-                                                    {
-                                                        "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/loadBalancers/backendAddressPools', parameters('InternalLoadBalancerName'), parameters('LoadBalancerBackendIPPoolNameSubnet3'))]"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "[concat(parameters('VmssNameBYOL'),'-nic-config', '-subnet', '4')]",
-                                "properties": {
-                                    "primary": false,
-                                    "enableIPForwarding": true,
-                                    "ipConfigurations": [
-                                        {
-                                            "name": "[concat(parameters('VmssNameBYOL'), '-ip-config','-subnet', '4')]",
-                                            "properties": {
-                                                "Subnet": {
-                                                    "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/virtualNetworks/subnets', parameters('VnetName'), parameters('Subnet4Name'))]"
-                                                },
-                                                "loadBalancerBackendAddressPools": [
-                                                    {
-                                                        "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/loadBalancers/backendAddressPools', parameters('InternalLoadBalancerName'), parameters('LoadBalancerBackendIPPoolNameSubnet4'))]"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
                         ]
                     }
                 }
@@ -546,50 +490,6 @@
                                     ]
                                 }
                             },
-                            {
-                                "name": "[concat(parameters('VmssNamePAYG'),'-nic-config', '-subnet', '3')]",
-                                "properties": {
-                                    "primary": false,
-                                    "enableIPForwarding": true,
-                                    "ipConfigurations": [
-                                        {
-                                            "name": "[concat(parameters('VmssNamePAYG'), '-ip-config','-subnet', '3')]",
-                                            "properties": {
-                                                "Subnet": {
-                                                    "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/virtualNetworks/subnets', parameters('VnetName'), parameters('Subnet3Name'))]"
-                                                },
-                                                "loadBalancerBackendAddressPools": [
-                                                    {
-                                                        "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/loadBalancers/backendAddressPools', parameters('InternalLoadBalancerName'), parameters('LoadBalancerBackendIPPoolNameSubnet3'))]"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "name": "[concat(parameters('VmssNamePAYG'),'-nic-config', '-subnet', '4')]",
-                                "properties": {
-                                    "primary": false,
-                                    "enableIPForwarding": true,
-                                    "ipConfigurations": [
-                                        {
-                                            "name": "[concat(parameters('VmssNamePAYG'), '-ip-config','-subnet', '4')]",
-                                            "properties": {
-                                                "Subnet": {
-                                                    "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/virtualNetworks/subnets', parameters('VnetName'), parameters('Subnet4Name'))]"
-                                                },
-                                                "loadBalancerBackendAddressPools": [
-                                                    {
-                                                        "id": "[resourceId(subscription().subscriptionId, resourceGroup().name, 'Microsoft.Network/loadBalancers/backendAddressPools', parameters('InternalLoadBalancerName'), parameters('LoadBalancerBackendIPPoolNameSubnet4'))]"
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
                         ]
                     }
                 }
