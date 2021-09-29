@@ -291,6 +291,10 @@
             "apiVersion": "2019-07-01",
             "location": "[resourceGroup().location]",
             "name": "[parameters('VmssNameBYOL')]",
+            "zones": [
+                "1",
+                "2"
+            ]
             "plan": {
                 "name": "[parameters('VmImageReferenceFgtBYOL').sku]",
                 "publisher": "[parameters('VmImageReferenceFgtBYOL').publisher]",
@@ -397,6 +401,10 @@
             "apiVersion": "2019-07-01",
             "location": "[resourceGroup().location]",
             "name": "[parameters('VmssNamePAYG')]",
+            "zones": [
+                "1",
+                "2"
+            ]
             "plan": {
                 "name": "[parameters('VmImageReferenceFgtPAYG').sku]",
                 "publisher": "[parameters('VmImageReferenceFgtPAYG').publisher]",
