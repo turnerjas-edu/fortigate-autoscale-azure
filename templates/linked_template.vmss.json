@@ -339,6 +339,7 @@
                                 "properties": {
                                     "primary": true,
                                     "enableIPForwarding": true,
+                                    "enableAcceleratedNetworking": true,
                                     "ipConfigurations": [
                                         {
                                             "name": "[concat(parameters('VmssNameBYOL'), '-ip-config','-subnet', '1')]",
@@ -369,6 +370,7 @@
                                 "properties": {
                                     "primary": false,
                                     "enableIPForwarding": true,
+                                    "enableAcceleratedNetworking": true,
                                     "ipConfigurations": [
                                         {
                                             "name": "[concat(parameters('VmssNameBYOL'), '-ip-config','-subnet', '2')]",
